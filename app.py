@@ -91,6 +91,10 @@ def webhook():
 
             # 'dad joke' in text
             elif 'dad joke' in userText.upper():
+                greetStr = random.choice(randomGreetings)
+                nameStr = random.choice(randomNames)
+                msg = '{}, {}'.format(greetStr, nameStr)
+                send_message(msg)
                 send_dadjoke()
             
             # contains i'm
