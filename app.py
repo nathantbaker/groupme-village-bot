@@ -103,13 +103,13 @@ def webhook():
             send_message(msg)
             return "ok", 200
         
-        elif userText.upper() == '/HELP':
+        elif '/HELP' in userText.upper():
             send_message('VILLAGE BOT COMMANDS\\n==============================\\n\/dadjoke\\n\/help\\n\/hi\\n==============================')
         
-        elif userText.upper() == '/DADJOKE' or userText.upper() == '/DAD JOKE':
+        elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper():
             send_dadjoke()
             
-        elif userText.upper() == '/HI' or userText.upper() == '/HEY' or userText.upper() == '/HELLO' or userText.upper() == '/HEYO':
+        elif '/HI' in userText.upper() or '/HEY' in userText.upper() or '/HELLO' in userText.upper() or '/HEYO' in userText.upper():
             greetStr = random.choice(randomGreetings)
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
