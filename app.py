@@ -79,7 +79,6 @@ def webhook():
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
-            send_dadjoke()
             return "ok", 200
         
         elif userText.upper() == '/HELP':
@@ -88,7 +87,11 @@ def webhook():
         elif userText.upper() == '/DADJOKE' or userText.upper() == '/DAD JOKE':
             send_dadjoke()
             
-        
+        elif userText.upper() == '/HI' or userText.upper() == '/HEY' or userText.upper() == '/HELLO' or userText.upper() == '/HEYO':
+            greetStr = random.choice(randomGreetings)
+            nameStr = random.choice(randomNames)
+            msg = '{}, {}'.format(greetStr, nameStr)
+            send_message(msg)
         
         print('Dad environ:', os.path.exists("isTimeout.txt"))
         if not os.path.exists("isTimeout.txt"):
