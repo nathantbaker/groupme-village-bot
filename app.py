@@ -82,7 +82,7 @@ def webhook():
             return "ok", 200
         
         elif userText.upper() == '/HELP':
-            send_message('VILLAGE BOT COMMANDS\\n-------------------------------------\\n\/dadjoke ...... Village Bot tells you a dad joke\\n\/hi ........... Village Bot says hi\\n-------------------------------------')
+            send_message('VILLAGE BOT COMMANDS\\n==============================\\n\/dadjoke\\n\/hi\\n==============================')
         
         elif userText.upper() == '/DADJOKE' or userText.upper() == '/DAD JOKE':
             send_dadjoke()
