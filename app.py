@@ -90,11 +90,9 @@ def webhook():
                 send_winningson()
 
             # dad commands perhaps
-            elif userText.upper().startswith('DAD '):
-                if userText.split(' ')[1].upper() == 'JOKE':
-                    send_dadjoke()
-                elif userText.split(' ')[1].upper() == 'FORTUNE':
-                    send_fortune()
+            elif userText.upper().startswith('/DADJOKE '):
+                userText.split(' ')[1].upper() == 'JOKE':
+                  send_dadjoke()
             
             # contains i'm
             elif ' I\'m ' in userText:
