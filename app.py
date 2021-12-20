@@ -103,11 +103,11 @@ def webhook():
         elif userText.upper() == '/HELP':
             send_message("""VILLAGE BOT COMMANDS
                             ==============================
-                            /dadjoke
-                            /help
-                            /hi
-                            /start
-                            /stop
+                            \/dadjoke
+                            \/help
+                            \/hi
+                            \/start
+                            \/stop
                             ==============================""")
         
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper():
