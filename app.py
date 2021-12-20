@@ -90,16 +90,16 @@ def webhook():
         userText = data['text']
         
         # timeout feature
-        if userText.upper() == 'SHUT UP DAD':
+        elif userText.upper() == '/STOP':
             changeTimeout(True)
-            send_message('Ok sport... :(')
+            send_message('Ok sport 😢 Village Bot shutting down...)
             return "ok", 200
         
-        elif userText.upper() == 'COME BACK DAD' or userText.upper() == 'DAD COME BACK':
+        elif userText.upper() == '/START' or userText.upper() == '/RUN':
             changeTimeout(False)
             greetStr = random.choice(randomGreetings)
             nameStr = random.choice(randomNames)
-            msg = '{}, {}'.format(greetStr, nameStr)
+            msg = '{}, {}, {}'.format(greetStr, nameStr, " Village Bot ready to serve!)
             send_message(msg)
             return "ok", 200
         
