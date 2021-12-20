@@ -101,10 +101,16 @@ def webhook():
             return "ok", 200
         
         elif userText.upper() == '/HELP':
-            send_message('VILLAGE BOT COMMANDS\n==============================')
 
-#             send_message('VILLAGE BOT COMMANDS\n==============================\n\/dadjoke\n\/help\n\/hi\n\/start\n\/stop\n==============================')
-
+           helpStrings = [
+                'VILLAGE BOT COMMANDS\n',
+                '==============================\n'
+           ]
+  
+            # printing the list using loop
+            for x in range(len(helpStrings)):
+                send_message(helpStrings[x])
+ 
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper():
             send_dadjoke()
             
