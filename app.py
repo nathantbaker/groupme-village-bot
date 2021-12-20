@@ -19,7 +19,7 @@ randomGreetings = [
 
 randomNames = [
     'champ!',
-    'slugger!',
+    'slugger!'
     'partner!',
     'boyo!',
     'kiddo!',
@@ -79,6 +79,7 @@ def webhook():
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
+            send_dadjoke()
             return "ok", 200
         
         print('Dad environ:', os.path.exists("isTimeout.txt"))
