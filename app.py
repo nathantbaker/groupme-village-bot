@@ -82,7 +82,7 @@ def webhook():
             send_dadjoke()
             return "ok", 200
         
-        elif userText.upper() == 'DAD JOKE' or userText.upper() == 'DADJOKE':
+        elif userText.upper() == '/DADJOKE' or userText.upper() == '/DAD JOKE':
             send_dadjoke()
         
         print('Dad environ:', os.path.exists("isTimeout.txt"))
