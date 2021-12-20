@@ -90,7 +90,7 @@ def webhook():
                 send_winningson()
 
             #starts with /dadjoke
-            elif userText.startswith('\/DADJOKE'):
+            elif '\/DADJOKE' in userText:
                 send_dadjoke()
             
             # contains i'm
