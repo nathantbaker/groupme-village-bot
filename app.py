@@ -89,8 +89,8 @@ def webhook():
                 print('Sending winning son!')
                 send_winningson()
 
-            #starts with /dadjoke
-            elif '\/DADJOKE' in userText:
+            # 'dad joke' in text
+            elif 'dad joke' in userText.upper():
                 send_dadjoke()
             
             # contains i'm
