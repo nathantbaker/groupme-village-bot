@@ -92,7 +92,7 @@ def webhook():
         # timeout feature
         elif userText.upper() == '/STOP':
             changeTimeout(True)
-            send_message('Beep Boop. Village Bot shutting down...)
+            send_message('Beep Boop. Village Bot shutting down...')
             return "ok", 200
         
         elif userText.upper() == '/START' or userText.upper() == '/RUN':
