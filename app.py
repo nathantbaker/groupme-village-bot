@@ -26,6 +26,28 @@ randomNames = [
     'sonny'
 ]
 
+villagers = [
+    'Melanie',
+    'April'
+    'Christine',
+    'Colby',
+    'Daniel',
+    'Dave',
+    'Elissa',
+    'Gio',
+    'Heather',
+    'Kim',
+    'Mark',
+    'Nate',
+    'Price',
+    'Rob',
+    'Russ',
+    'Ryan',
+    'Sarah',
+    'Tim',
+    'Wesley'
+]
+
 winningsonImages = [
     'winningson0.png',
     'winningson1.png',
