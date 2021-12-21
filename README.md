@@ -1,12 +1,3 @@
-# GroupMe Village Bot
-
-Setup a GroupMe bot that uses the names of the people in your group!
-
-## Commands
-
-Beep Boop. Here is what I can do!
-
-Start all commands with a forward slash (/). Commands are not case sensitive. You can use all commands in the middle of a sentence except for the /start and /stop commands.
 
 | COMMAND          | DESCRIPTION |
 | :--------------- | :----------- |
@@ -23,6 +14,17 @@ Start all commands with a forward slash (/). Commands are not case sensitive. Yo
 | /who             | Returns a random Villager |
 | /which2          | Returns 2 random villager names |
 | /which3          | Returns 3 random villager names |
+
+
+# GroupMe Village Bot
+
+Setup a GroupMe bot that uses the names of the people in your group!
+
+## Commands
+
+Beep Boop. Here is what I can do!
+
+Start all commands with a forward slash (/). Commands are not case sensitive. You can use all commands in the middle of a sentence except for the /start and /stop commands.
 
 ## Local Dev
 
