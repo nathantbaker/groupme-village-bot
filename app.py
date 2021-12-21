@@ -165,8 +165,13 @@ def webhook():
             msg = "{}, {}, and {}".format(villager1, villager2, villager3)
             send_message(msg)
  
-        elif '/8ball' in userText.upper() or '/8' in userText.upper() or '/EIGHTBALL' in userText.upper() or '/EIGHT BALL' in userText.upper():
+        elif '/8BALL' in userText.upper() or '/8' in userText.upper() or '/EIGHTBALL' in userText.upper() or '/EIGHT BALL' in userText.upper():
             send_message(random.choice(eightBall))
+            
+        elif '/FINGER' in userText.upper() or '/FUCK' in userText.upper() or '/MIDDLE' in userText.upper():
+            number = random.randint(1, 12)
+            imageUrl = "https://nathantbaker.com/{}/finger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
+            send_message(imageUrl)
  
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper() or '/RYANJOKE' in userText.upper():
             send_dadjoke()
@@ -176,7 +181,7 @@ def webhook():
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
-            middle_finger()
+
             
         elif '/FORTUNE' in userText.upper():
             send_fortune()
