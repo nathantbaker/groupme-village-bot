@@ -172,11 +172,19 @@ def webhook():
             number = random.randint(1, 15)
             imageUrl = "https://nathantbaker.com/{}/thefinger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
             send_message(imageUrl)
- 
-        elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper() or '/RYANJOKE' in userText.upper():
+        
+        #uses default image
+        elif '/RYAN' in userText.upper(): # captures /ryanjoke and /ryan joke
             send_dadjoke()
-            imageUrl = "https://nathantbaker.com/{}/eye/1.jpg".format(os.getenv('IMAGE_PATH'))
-            send_message(imageUrl)
+            defaultImage = "https://nathantbaker.com/{}/eye/default.jpg".format(os.getenv('IMAGE_PATH'))
+            send_message(defaultImage)
+        
+        # uses random image
+        elif '/DAD' in userText.upper(): # captures /dad joke and /dadjoke
+            send_dadjoke()
+            randomOne = random.randint(1, 2) # we need more!
+            randomImage = "https://nathantbaker.com/{}/eye/{}.jpg".format(os.getenv('IMAGE_PATH'), randomOne)
+            send_message(randomImage)
             
         elif '/HI' in userText.upper() or '/HEY' in userText.upper() or '/HELLO' in userText.upper() or '/HEYO' in userText.upper():
             greetStr = random.choice(randomGreetings)
