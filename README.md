@@ -1,4 +1,4 @@
-# groupme-village-bot
+# GroupMe Village Bot
 
 ## Local Dev
 
