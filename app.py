@@ -75,13 +75,17 @@ def webhook():
             send_message('Beep Boop. Village Bot shutting down...')
             return "ok", 200
         
-        elif userText.upper() == '/START' or userText.upper() == '/RUN':
+        elif userText.upper() == '/START' or userText.upper() == '/RUN' or userText.upper() == '/BOT' or userText.upper() == '/VILLAGEBOT':
             changeTimeout(False)
-            send_message('Beep Boop. Village Bot ready to serve!')
+            send_message('Beep Boop. Village Bot ready to serve. Type \"\/help\" to see what I can do!')
             return "ok", 200
         
         elif userText.upper() == '/HELP':
-             send_message('help text will go here\nmore stuff!') #TODO
+             send_message('help text will go here!') #TODO
+                
+        elif '/WHO' in userText.upper() or '/VILLAGER' in userText.upper():
+            villager = random.choice(villagers)
+            send_message(villager)
  
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper() or '/RYANJOKE' in userText.upper():
             send_dadjoke()
