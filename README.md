@@ -24,12 +24,7 @@ Start all commands with a forward slash (/). Commands are not case sensitive. Yo
 
 Setup a GroupMe bot that uses the names of the people in your group!
 
-##Heroku Config Vars
-
-1. GROUPME_BOT_ID
-1. IMAGE_PATH
-
-## Local Dev
+## Local Development
 
 NOTE, APP NOT ON 3.9.9 yet.
 
@@ -42,3 +37,9 @@ NOTE, APP NOT ON 3.9.9 yet.
 3. Run `Pyevn global 3.9.9`
 4. Run `python --version` and make sure you're now on Python 3.9.9.
 
+## Deployment to Heroku
+
+### Heroku Config Vars
+
+1. GROUPME_BOT_ID
+1. IMAGE_PATH
