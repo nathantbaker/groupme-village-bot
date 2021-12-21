@@ -169,7 +169,7 @@ def webhook():
             send_message(random.choice(eightBall))
             
         elif '/FINGER' in userText.upper() or '/FUCK' in userText.upper() or '/MIDDLE' in userText.upper():
-            number = random.randint(1, 13)
+            number = random.randint(1, 14)
             imageUrl = "https://nathantbaker.com/{}/thefinger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
             send_message(imageUrl)
  
