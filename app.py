@@ -83,7 +83,7 @@ def webhook():
         elif userText.upper() == '/HELP':
              send_message('help text will go here\nmore stuff!') #TODO
  
-        elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper():
+        elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper() or '/RYANJOKE' in userText.upper():
             send_dadjoke()
             
         elif '/HI' in userText.upper() or '/HEY' in userText.upper() or '/HELLO' in userText.upper() or '/HEYO' in userText.upper():
@@ -92,60 +92,6 @@ def webhook():
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
 
-        # Are ya winning, son?
-        elif userText.upper().startswith('AM I WINNING DAD') or userText.upper().startswith('AM I WINNING, DAD'):
-            print('Sending winning son!')
-            send_winningson()
-
-        # 'dad joke' in text
-        elif 'dad joke' in userText.upper():
-            greetStr = random.choice(randomGreetings)
-            nameStr = random.choice(randomNames)
-            msg = '{}, {}'.format(greetStr, nameStr)
-            send_message(msg)
-            send_dadjoke()
-
-        # contains i'm
-        elif ' I\'m ' in userText:
-            send_message('Hi, {}, I\'m Dad!'.format(userText.split(' I\'m ')[1]))
-
-        elif ' I\’m ' in userText:
-            send_message('Hi, {}, I\'m Dad!'.format(userText.split(' I\’m ')[1]))
-
-        elif ' i\'m ' in userText:
-            send_message('Hi, {}, I\'m Dad!'.format(userText.split(' i\'m ')[1]))
-
-        elif ' Im ' in userText:
-            send_message('Hi, {}, I\'m Dad!'.format(userText.split(' Im ')[1]))
-
-        elif ' im ' in userText:
-            send_message('Hi, {}, I\'m Dad!'.format(userText.split(' im ')[1]))
-
-        # starts with im 
-        elif userText.startswith('I\'m'):
-            send_message('Hi, {}, I\'m Dad!'.format(userText.replace('I\'m', '')))
-
-        elif userText.startswith('I’m'):
-            send_message('Hi, {}, I\'m Dad!'.format(userText.replace('I’m', '')))
-
-        elif userText.startswith('i\'m'):
-            send_message('Hi, {}, I\'m Dad!'.format(userText.replace('i\'m', '')))
-
-        elif userText.startswith('im '):
-            send_message('Hi, {}, I\'m Dad!'.format(userText.replace('im ', '')))
-
-        elif userText.startswith('Im '):
-            send_message('Hi, {}, I\'m Dad!'.format(userText.replace('Im ', '')))
-
-        elif userText.startswith('IM '):
-            send_message('Hi, {}, I\'m Dad!'.format(userText.replace('IM ', '')))
-
-        elif 'HI DAD' in userText.upper():
-            greetStr = random.choice(randomGreetings)
-            nameStr = random.choice(randomNames)
-            msg = '{}, {}'.format(greetStr, nameStr)
-            send_message(msg)
-        
     return "ok", 200
 
 def send_message(msg):
