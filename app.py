@@ -136,7 +136,7 @@ def webhook():
             return "ok", 200
         
         elif '/HELP' in userText.upper() or '/COMMANDS' in userText.upper() or '/LIST' in userText.upper():
-             send_message("Beep Boop. Here is what I can do!\\n\\n##############################################\\n\\n\/8ball ......... Magic Eight Ball response\\n\/clue .......... Discover whodunit!\\n\/finger /fuck .. Curated middle finger\\n\/fortune ....... See someone's fortune\\n\/help .......... See this screen\\n\/hi ............ Say hi to Village Bot\\n\/ryanjoke ...... Get ready to eye roll...\\n\/start ......... Activate Village Bot\\n\/stop .......... Kill Village Bot\\n\/who ........... Returns a random Villager\\n\/which2 ........ 2 random villager names\\n\/which3 ........ Returns 3 random villagers\\n\\n##############################################\\n")
+             send_message("Beep Boop. Here is what I can do!\\nStart all commands with a forward slash (\/)\\n\\n##############################################\\n\\n8ball .......... Magic Eight Ball response\\nclue ........... Discover whodunit!\\nfinger or fuck . Curated middle finger\\nfortune ........ See someone's fortune\\nhelp ........... See this screen\\nhi ............. Say hi to Village Bot\\nryanjoke ....... Get ready to eye roll...\\nstart .......... Activate Village Bot\\nstop ........... Kill Village Bot\\nwho ............ Returns a random Villager\\nwhich2 ......... 2 random villager names\\nwhich3 ......... Returns 3 random villagers\\n\\n##############################################\\n")
                 
         elif '/CLUE' in userText.upper() or '/MURDER' in userText.upper():
             villager1 = random.choice(villagers)
