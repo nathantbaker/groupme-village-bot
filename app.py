@@ -80,7 +80,7 @@ def webhook():
             send_message('Beep Boop. Village Bot ready to serve. Type \"\/help\" to see what I can do!')
             return "ok", 200
         
-        elif userText.upper() == '/HELP':
+        elif userText.upper() == '/HELP' or userText.upper() == '/COMMANDS':
              send_message('help text will go here!') #TODO
                 
         elif '/WHO' in userText.upper() or '/1' in userText.upper():
