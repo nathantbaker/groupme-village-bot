@@ -91,6 +91,9 @@ def webhook():
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
+            
+        elif '/FORTUNE' in userText.upper()
+            send_fortune()
 
     return "ok", 200
 
