@@ -87,10 +87,10 @@ def webhook():
             villager = random.choice(villagers)
             send_message(villager)
             
-        elif userText.upper() == '/WHICH 2' or userText.upper() == '/WHICH2' or userText.upper() == '/2VILLAGERS' or userText.upper() == '/2 VILLAGERS':
+        elif userText.upper() == '/WHICH 2' or userText.upper() == '/WHICH2' or userText.upper() == '/WHICH TWO' or userText.upper() == '/2VILLAGERS' or userText.upper() == '/2 VILLAGERS':
             villager1 = random.choice(villagers)
-            villager2 = random.choice(villagers)
-            msg = '{}, ' and ' , {}'.format(villager1, villager2)
+            villager2 = random.choice(villagers)            
+            msg = "{} and {}".format(villager1, villager2)
             send_message(msg)
  
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper() or '/RYANJOKE' in userText.upper():
