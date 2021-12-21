@@ -1,19 +1,19 @@
 
-| COMMAND          | DESCRIPTION |
-| :--------------- | :----------- |
-| /8ball           | Magic Eight Ball response |
-| /clue            | Discover whodunit! |
-| /dadjoke         | Random dad joke, with a random eye roll image |
-| /finger or /f*** | Curated middle finger photo |
-| /fortune         | See someone's fortune |
-| /help            | See this Village Bot commands |
-| /hi              | Say hi to Village Bot |
-| /ryanjoke        | This is what Village Bot calls a dad joke. Eye roll is always Christine of course. |
-| /start           | Activate Village Bot |
-| /stop            | Kill Village Bot |
-| /who             | Returns a random Villager |
-| /which2          | Returns 2 random villager names |
-| /which3          | Returns 3 random villager names |
+| COMMAND          | ALTERNATIVES          | DESCRIPTION |
+| :--------------- | :-----------          | :----------- |
+| /8ball           |                       | Magic Eight Ball response |
+| /clue            |                       | Discover whodunit! |
+| /dadjoke         |                       | Random dad joke, with a random eye roll image |
+| /finger or /f*** |                       | Curated middle finger photo |
+| /fortune         |                       | See someone's fortune |
+| /help            |                       | See this Village Bot commands |
+| /hi              |                       | Say hi to Village Bot |
+| /ryanjoke        |                       | This is what Village Bot calls a dad joke. Eye roll is always Christine of course. |
+| /start           |                       | Activate Village Bot |
+| /stop            |                       | Kill Village Bot |
+| /who             |                       | Returns a random Villager |
+| /which2          |                       | Returns 2 random villager names |
+| /which3          |                       | Returns 3 random villager names |
 
 Beep Boop. Here is what I can do!
 
