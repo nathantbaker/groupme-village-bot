@@ -148,40 +148,41 @@ def webhook():
             msg = "{} {} killed {} with the {} in {}'s {}.".format(intro, villager1, villager2, weapon, villager3, location)
             send_message(msg)
                 
-        elif '/WHO' in userText.upper() or '/1' in userText.upper():
+        elif '/WHO' in userText.upper() or '/villager' in userText.upper():
             villager = random.choice(villagers)
             send_message(villager)
             
-        elif '/WHICH2' in userText.upper() or '/2' in userText.upper() or '/WHICH 2' in userText.upper() or '/WHICH TWO' in userText.upper():
+        elif '/WHICH2' in userText.upper() or '/WHICH 2' in userText.upper() or '/WHICH TWO' in userText.upper():
             villager1 = random.choice(villagers)
             villager2 = random.choice(villagers)            
             msg = "{} and {}".format(villager1, villager2)
             send_message(msg)
             
-        elif '/WHICH3' in userText.upper() or '/3' in userText.upper() or '/WHICH 3' in userText.upper() or '/WHICH THREE' in userText.upper():
+        elif '/WHICH3' in userText.upper() or '/WHICH 3' in userText.upper() or '/WHICH THREE' in userText.upper():
             villager1 = random.choice(villagers)
             villager2 = random.choice(villagers)
             villager3 = random.choice(villagers)
             msg = "{}, {}, and {}".format(villager1, villager2, villager3)
             send_message(msg)
  
-        elif '/8BALL' in userText.upper() or '/8' in userText.upper() or '/EIGHTBALL' in userText.upper() or '/EIGHT BALL' in userText.upper():
+        elif '/8BALL' in userText.upper() or '/EIGHTBALL' in userText.upper() or '/EIGHT BALL' in userText.upper():
             send_message(random.choice(eightBall))
             
         elif '/FINGER' in userText.upper() or '/FUCK' in userText.upper() or '/MIDDLE' in userText.upper():
-            number = random.randint(1, 12)
-            imageUrl = "https://nathantbaker.com/{}/finger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
+            number = random.randint(1, 13)
+            imageUrl = "https://nathantbaker.com/{}/thefinger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
             send_message(imageUrl)
  
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper() or '/RYANJOKE' in userText.upper():
             send_dadjoke()
+            imageUrl = "https://nathantbaker.com/{}/eye/1.jpg".format(os.getenv('IMAGE_PATH'))
+            send_message(imageUrl)
             
         elif '/HI' in userText.upper() or '/HEY' in userText.upper() or '/HELLO' in userText.upper() or '/HEYO' in userText.upper():
             greetStr = random.choice(randomGreetings)
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
-
             
         elif '/FORTUNE' in userText.upper():
             send_fortune()
@@ -229,29 +230,6 @@ def send_fortune():
     url = 'https://api.groupme.com/v3/bots/post'
     
     testcommand = 'curl -d "{\\"text\\" : \\"' + json.replace('\\n', ' ').replace('"', '').replace('\\t', '    ').replace('\\', '"') + '\\", \\"bot_id\\" : \\"' + os.getenv('GROUPME_BOT_ID') + '\\"}" https://api.groupme.com/v3/bots/post'
-    print('command string: ' + testcommand)
-    os.system(testcommand)
-
-def send_winningson():
-    
-    print('In send winningson!')
-    
-    url = 'https://api.groupme.com/v3/bots/post'
-
-    testcommand = 'curl -d "{\\"text\\" : \\"' + 'Are ya winning, son?\n' + random.choice(winningsonUrls).replace('\\n', ' ').replace('"', '').replace('\\t', '    ').replace('\\', '"') + '\\", \\"bot_id\\" : \\"' + os.getenv('GROUPME_BOT_ID') + '\\"}" https://api.groupme.com/v3/bots/post'
-    print('command string: ' + testcommand)
-    os.system(testcommand)
-    
-def middle_finger():
-    
-    print('In send middle finger!')
-    
-    number = random.randint(1, 12)
-    imageUrl = "https://nathantbaker.com/{}/finger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
-    
-    url = 'https://api.groupme.com/v3/bots/post'
-
-    testcommand = 'curl -d "{\\"text\\" : \\"' + 'Are ya winning, son?\n' + imageUrl.replace('\\n', ' ').replace('"', '').replace('\\t', '    ').replace('\\', '"') + '\\", \\"bot_id\\" : \\"' + os.getenv('GROUPME_BOT_ID') + '\\"}" https://api.groupme.com/v3/bots/post'
     print('command string: ' + testcommand)
     os.system(testcommand)
     
