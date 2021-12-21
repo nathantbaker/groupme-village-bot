@@ -81,7 +81,7 @@ def webhook():
             return "ok", 200
         
         elif userText.upper() == '/HELP':
-             send_message('help text will go here') #TODO
+             send_message('help text will go here\nmore stuff!') #TODO
  
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper():
             send_dadjoke()
