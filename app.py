@@ -148,7 +148,10 @@ def webhook():
             villager1 = random.choice(villagers)
             villager2 = random.choice(villagers)
             villager3 = random.choice(villagers)
-            msg = "{} {} killed {} with the {} in {}'s {}.".format(clueIntro, villager1, villager2, clueWeapon, villager3, clueLocation)
+            intro = random.choice(clueIntro)
+            weapon = random.choice(clueWeapon)
+            location = random.choice(clueLocation)
+            msg = "{} {} killed {} with the {} in {}'s {}.".format(intro, villager1, villager2, weapon, villager3, location)
             send_message(msg)
                 
         elif '/WHO' in userText.upper() or '/1' in userText.upper():
