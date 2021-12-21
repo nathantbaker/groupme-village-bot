@@ -12,11 +12,12 @@ Start all commands with a forward slash (/). Commands are not case sensitive. Yo
 | :--------------- | :----------- |
 | /8ball           | Magic Eight Ball response |
 | /clue            | Discover whodunit! |
+| /dadjoke         | Random dad joke, with a random eye roll image |
 | /finger or /fuck | Curated middle finger photo |
 | /fortune         | See someone's fortune |
 | /help            | See this Village Bot commands |
 | /hi              | Say hi to Village Bot |
-| /ryanjoke        | This is what Village Bot calls a dad joke |
+| /ryanjoke        | This is what Village Bot calls a dad joke. Eye roll is always Christine of course. |
 | /start           | Activate Village Bot |
 | /stop            | Kill Village Bot |
 | /who             | Returns a random Villager |
