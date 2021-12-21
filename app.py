@@ -132,7 +132,7 @@ def webhook():
         
         elif userText.upper() == '/START' or userText.upper() == '/RUN' or userText.upper() == '/BOT' or userText.upper() == '/VILLAGEBOT':
             changeTimeout(False)
-            send_message('Beep Boop. Village Bot ready to serve. Type \"\/help\" to see what I can do!')
+            send_message('Beep Boop. Village Bot ready to serve. Type \"\/" + "help\" to see what I can do!')
             return "ok", 200
         
         elif '/HELP' in userText.upper() or '/COMMANDS' in userText.upper() or '/LIST' in userText.upper():
