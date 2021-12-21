@@ -71,6 +71,44 @@ eightBall = [
     'Very doubtful.'
 ]
 
+clueIntro = [
+    'I think we all this coming.',
+    'Rejoice!',
+    'Oh no!',
+    'I think Covid made them do it.',
+    'I must sadly announce a tradegy!',
+    'Sounds about right.',
+    'THE HORROR!!!',
+    'Well that ties a nice bow on the situation...'
+]
+
+clueLocation = [
+    'kitchen',
+    'ballroom',
+    'conservatory',
+    'billiard room',
+    'library',
+    'study',
+    'hall',
+    'lounge',
+    'dining room'
+]
+
+clueWeapon = [
+    'revolver',
+    'dagger',
+    'lead pipe',
+    'rope',
+    'candlestick',
+    'wrench'
+]
+
+
+
+
+
+
+
 # use a file b/c I think this app.py runs only
 # when a message is recieved, so a global variable
 # won't save anything
@@ -105,6 +143,12 @@ def webhook():
         
         elif userText.upper() == '/HELP' or userText.upper() == '/COMMANDS':
              send_message('help text will go here!\nAlso here!') #TODO
+                
+        elif '/CLUE' in userText.upper() or '/MURDER' in userText.upper():
+            villager1 = random.choice(villagers)
+            villager2 = random.choice(villagers)
+            villager3 = random.choice(villagers)
+            msg = "{} {} killed {} with the {} in {}\'s {}.".format(clueIntro, villager1, villager2, villagerWeapon, villager3, clueLocation)
                 
         elif '/WHO' in userText.upper() or '/1' in userText.upper():
             villager = random.choice(villagers)
