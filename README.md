@@ -13,7 +13,7 @@ Start all commands with a forward slash (/). Commands are not case sensitive. Yo
 | /8ball           | Magic Eight Ball response |
 | /clue            | Discover whodunit! |
 | /dadjoke         | Random dad joke, with a random eye roll image |
-| /finger or /fuck | Curated middle finger photo |
+| /finger or /fu   | Curated middle finger photo |
 | /fortune         | See someone's fortune |
 | /help            | See this Village Bot commands |
 | /hi              | Say hi to Village Bot |
