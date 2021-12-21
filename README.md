@@ -4,6 +4,7 @@
 | /8ball           |                       | Magic Eight Ball response |
 | /clue            |                       | Discover whodunit! |
 | /dadjoke         |                       | Random dad joke, with a random eye roll image |
+| /eyeroll         |                       | Random eye roll image |
 | /finger or /f*** |                       | Curated middle finger photo |
 | /fortune         |                       | See someone's fortune |
 | /help            |                       | See this Village Bot commands |
