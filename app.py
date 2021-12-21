@@ -182,9 +182,10 @@ def webhook():
         # uses random image
         elif '/DAD' in userText.upper(): # captures /dad joke and /dadjoke
             send_dadjoke()
-            randomOne = random.randint(1, 2) # we need more!
-            randomImage = "{}/eye/{}.jpg".format(os.getenv('IMAGE_PATH'), randomOne)
-            send_message(randomImage)
+            eye_roll()
+            
+        elif '/EYEROLL' in userText.upper():
+            eye_roll()
             
         elif '/HI' in userText.upper() or '/HEY' in userText.upper() or '/HELLO' in userText.upper() or '/HEYO' in userText.upper():
             greetStr = random.choice(randomGreetings)
@@ -240,4 +241,9 @@ def send_fortune():
     testcommand = 'curl -d "{\\"text\\" : \\"' + json.replace('\\n', ' ').replace('"', '').replace('\\t', '    ').replace('\\', '"') + '\\", \\"bot_id\\" : \\"' + os.getenv('GROUPME_BOT_ID') + '\\"}" https://api.groupme.com/v3/bots/post'
     print('command string: ' + testcommand)
     os.system(testcommand)
+    
+def eye_roll():
+    randomOne = random.randint(1, 2) # we need more!
+    randomImage = "{}/eye/{}.jpg".format(os.getenv('IMAGE_PATH'), randomOne)
+    send_message(randomImage)
     
