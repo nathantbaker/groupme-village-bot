@@ -135,7 +135,7 @@ def webhook():
             send_message('Beep Boop. Village Bot ready to serve. Type \"\/help\" to see what I can do!')
             return "ok", 200
         
-        elif '/HELP' in userText.upper() or '/COMMANDS' in userText.upper():
+        elif '/HELP' in userText.upper() or '/COMMANDS' in userText.upper() or '/LIST' in userText.upper():
              send_message('help text will go here!\ncool') #TODO
                 
         elif '/CLUE' in userText.upper() or '/MURDER' in userText.upper():
