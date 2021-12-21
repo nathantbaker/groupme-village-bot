@@ -48,6 +48,29 @@ villagers = [
     'Wesley'
 ]
 
+eightBall = [
+    'It is certain.',
+    'It is decidedly so.',
+    'Without a doubt.',
+    'Yes definitely.',
+    'You may rely on it.',
+    'As I see it, yes.',
+    'Most likely.',
+    'Outlook good.',
+    'Yes.',
+    'Signs point to yes.',
+    'Reply hazy, try again.',
+    'Ask again later.',
+    'Better not tell you now.',
+    'Cannot predict now.',
+    'Concentrate and ask again.',
+    'Don\'t count on it.',
+    'My reply is no.',
+    'My sources say no.',
+    'Outlook not so good.',
+    'Very doubtful.'
+]
+
 # use a file b/c I think this app.py runs only
 # when a message is recieved, so a global variable
 # won't save anything
@@ -99,6 +122,9 @@ def webhook():
             villager3 = random.choice(villagers)
             msg = "{}, {}, and {}".format(villager1, villager2, villager3)
             send_message(msg)
+ 
+        elif '/8ball' in userText.upper() or '/8' in userText.upper() or '/EIGHTBALL' in userText.upper() or '/EIGHT BALL' in userText.upper():
+            send_message(random.choice(eightBall))
  
         elif '/DADJOKE' in userText.upper() or '/DAD JOKE' in userText.upper() or '/RYANJOKE' in userText.upper():
             send_dadjoke()
