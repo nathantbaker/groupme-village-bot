@@ -104,7 +104,7 @@ def webhook():
             return "ok", 200
         
         elif userText.upper() == '/HELP' or userText.upper() == '/COMMANDS':
-             send_message('help text will go here!') #TODO
+             send_message('help text will go here!\nAlso here!') #TODO
                 
         elif '/WHO' in userText.upper() or '/1' in userText.upper():
             villager = random.choice(villagers)
