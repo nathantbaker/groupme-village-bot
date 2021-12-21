@@ -103,12 +103,6 @@ clueWeapon = [
     'wrench'
 ]
 
-
-
-
-
-
-
 # use a file b/c I think this app.py runs only
 # when a message is recieved, so a global variable
 # won't save anything
@@ -182,6 +176,7 @@ def webhook():
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
+            middle_finger()
             
         elif '/FORTUNE' in userText.upper():
             send_fortune()
@@ -239,6 +234,19 @@ def send_winningson():
     url = 'https://api.groupme.com/v3/bots/post'
 
     testcommand = 'curl -d "{\\"text\\" : \\"' + 'Are ya winning, son?\n' + random.choice(winningsonUrls).replace('\\n', ' ').replace('"', '').replace('\\t', '    ').replace('\\', '"') + '\\", \\"bot_id\\" : \\"' + os.getenv('GROUPME_BOT_ID') + '\\"}" https://api.groupme.com/v3/bots/post'
+    print('command string: ' + testcommand)
+    os.system(testcommand)
+    
+def middle_finger():
+    
+    print('In send middle finger!')
+    
+    number = random.randint(1, 12)
+    imageUrl = "https://nathantbaker.com/{}/finger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
+    
+    url = 'https://api.groupme.com/v3/bots/post'
+
+    testcommand = 'curl -d "{\\"text\\" : \\"' + 'Are ya winning, son?\n' + imageUrl.replace('\\n', ' ').replace('"', '').replace('\\t', '    ').replace('\\', '"') + '\\", \\"bot_id\\" : \\"' + os.getenv('GROUPME_BOT_ID') + '\\"}" https://api.groupme.com/v3/bots/post'
     print('command string: ' + testcommand)
     os.system(testcommand)
     
