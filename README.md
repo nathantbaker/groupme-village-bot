@@ -42,5 +42,5 @@ NOTE, APP NOT ON 3.9.9 yet.
 
 ### Heroku Config Vars
 
-1. GROUPME_BOT_ID
-1. IMAGE_PATH
+1. `GROUPME_BOT_ID`
+1. `IMAGE_PATH`
