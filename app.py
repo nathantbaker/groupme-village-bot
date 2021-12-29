@@ -122,23 +122,23 @@ def webhook():
     #if data['name'] != 'dad bot tester':
     if data['name'] != 'Dad Bot':
         
-        userText = data['text']
+        userText = data['text'].upper()
         
         # timeout feature
-        if userText.upper() == '/STOP':
+        if userText == '/STOP':
             changeTimeout(True)
             send_message('Beep Boop. Village Bot shutting down...')
             return "ok", 200
         
-        elif userText.upper() == '/START' or userText.upper() == '/RUN' or userText.upper() == '/BOT' or userText.upper() == '/VILLAGEBOT':
+        elif userText == '/START' or userText == '/RUN' or userText == '/BOT' or userText == '/VILLAGEBOT':
             changeTimeout(False)
             send_message('Beep Boop. Village Bot ready to serve. Type \"\/" + "help\" to see what I can do!')
             return "ok", 200
         
-        elif '/HELP' in userText.upper() or '/COMMANDS' in userText.upper() or '/LIST' in userText.upper():
+        elif '/HELP' in userText or '/COMMANDS' in userText or '/LIST' in userText:
              send_message("Beep Boop. Here is what I can do!\\nStart all commands with a forward slash (\/)\\n##################################\\n8ball .......... Magic Eight Ball response\\nclue ........... Discover whodunit!\\nfinger or f*** . Curated middle finger\\nfortune ........ See someone's fortune\\nhelp ........... See this screen\\nhi ............. Say hi to Village Bot\\nryanjoke ....... Get ready to eye roll...\\nstart .......... Activate Village Bot\\nstop ........... Kill Village Bot\\nwho ............ Returns a random Villager\\nwhich2 ......... 2 random villager names\\nwhich3 ......... Returns 3 random villagers\\n##################################\\n")
                 
-        elif '/CLUE' in userText.upper() or '/MURDER' in userText.upper():
+        elif '/CLUE' in userText or '/MURDER' in userText:
             villager1 = random.choice(villagers)
             villager2 = random.choice(villagers)
             villager3 = random.choice(villagers)
@@ -148,52 +148,52 @@ def webhook():
             msg = "{} {} killed {} with the {} in {}'s {}.".format(intro, villager1, villager2, weapon, villager3, location)
             send_message(msg)
                 
-        elif '/WHO' in userText.upper() or '/villager' in userText.upper():
+        elif '/WHO' in userText or '/villager' in userText:
             villager = random.choice(villagers)
             send_message(villager)
             
-        elif '/WHICH2' in userText.upper() or '/WHICH 2' in userText.upper() or '/WHICH TWO' in userText.upper():
+        elif '/WHICH2' in userText or '/WHICH 2' in userText or '/WHICH TWO' in userText:
             villager1 = random.choice(villagers)
             villager2 = random.choice(villagers)            
             msg = "{} and {}".format(villager1, villager2)
             send_message(msg)
             
-        elif '/WHICH3' in userText.upper() or '/WHICH 3' in userText.upper() or '/WHICH THREE' in userText.upper():
+        elif '/WHICH3' in userText or '/WHICH 3' in userText or '/WHICH THREE' in userText:
             villager1 = random.choice(villagers)
             villager2 = random.choice(villagers)
             villager3 = random.choice(villagers)
             msg = "{}, {}, and {}".format(villager1, villager2, villager3)
             send_message(msg)
  
-        elif '/8BALL' in userText.upper() or '/EIGHTBALL' in userText.upper() or '/EIGHT BALL' in userText.upper():
+        elif '/8BALL' in userText or '/EIGHTBALL' in userText or '/EIGHT BALL' in userText:
             send_message(random.choice(eightBall))
             
-        elif '/FINGER' in userText.upper() or '/FUCK' in userText.upper() or '/MIDDLE' in userText.upper():
+        elif '/FINGER' in userText or '/FUCK' in userText or '/MIDDLE' in userText:
             number = random.randint(1, 15)
             imageUrl = "{}/thefinger/{}.jpg".format(os.getenv('IMAGE_PATH'),number)
             send_message(imageUrl)
         
         #uses default image
-        elif '/RYAN' in userText.upper(): # captures /ryanjoke and /ryan joke
+        elif '/RYAN' in userText: # captures /ryanjoke and /ryan joke
             send_dadjoke()
             defaultImage = "{}/eye/default.jpg".format(os.getenv('IMAGE_PATH'))
             send_message(defaultImage)
         
         # uses random image
-        elif '/DAD' in userText.upper(): # captures /dad joke and /dadjoke
+        elif '/DAD' in userText: # captures /dad joke and /dadjoke
             send_dadjoke()
             eye_roll()
             
-        elif '/EYEROLL' in userText.upper():
+        elif '/EYEROLL' in userText:
             eye_roll()
             
-        elif '/HI' in userText.upper() or '/HEY' in userText.upper() or '/HELLO' in userText.upper() or '/HEYO' in userText.upper():
+        elif '/HI' in userText or '/HEY' in userText or '/HELLO' in userText or '/HEYO' in userText:
             greetStr = random.choice(randomGreetings)
             nameStr = random.choice(randomNames)
             msg = '{}, {}'.format(greetStr, nameStr)
             send_message(msg)
             
-        elif '/FORTUNE' in userText.upper():
+        elif '/FORTUNE' in userText:
             send_fortune()
 
     return "ok", 200
