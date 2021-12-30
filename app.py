@@ -148,7 +148,7 @@ def webhook():
             msg = "{} {} killed {} with the {} in {}'s {}.".format(intro, villager1, villager2, weapon, villager3, location)
             send_message(msg)
                 
-        elif '/WHO' in userText.upper() or '/villager' in userText.upper():
+        elif '/WHO' in userText.upper() or '/VILLAGER' in userText.upper():
             villager = random.choice(villagers)
             send_message(villager)
             
