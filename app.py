@@ -130,7 +130,7 @@ def webhook():
             send_message('Beep Boop. Village Bot shutting down...')
             return "ok", 200
         
-        elif userText.upper() in ['/START', '/RUN', '/BOT', '/VILLAGEBOT']:
+        elif '/START' in userText.upper() or '/RUN' in userText.upper():
             changeTimeout(False)
             send_message('Beep Boop. Village Bot ready to serve. Type \"\/" + "help\" to see what I can do!')
             return "ok", 200
