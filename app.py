@@ -1,4 +1,3 @@
-# bj test bot
 import os
 import json
 import random
@@ -130,7 +129,7 @@ def webhook():
             send_message('Beep Boop. Village Bot shutting down...')
             return "ok", 200
         
-        elif userText in ['/START', '/RUN', '/BOT', '/VILLAGEBOT']:
+        elif '/START' in userText or '/RUN' in userText:
             changeTimeout(False)
             send_message('Beep Boop. Village Bot ready to serve. Type \"\/" + "help\" to see what I can do!')
             return "ok", 200
@@ -147,7 +146,7 @@ def webhook():
             location = random.choice(clueLocation)
             msg = "{} {} killed {} with the {} in {}'s {}.".format(intro, villager1, villager2, weapon, villager3, location)
             send_message(msg)
-                
+
         elif '/WHO' in userText or '/VILLAGER' in userText:
             villager = random.choice(villagers)
             send_message(villager)
