@@ -130,7 +130,7 @@ def webhook():
             send_message('Beep Boop. Village Bot shutting down...')
             return "ok", 200
         
-        elif userText.upper() == '/START' or userText.upper() == '/RUN' or userText.upper() == '/BOT' or userText.upper() == '/VILLAGEBOT':
+        elif userText.upper() in ['/START', '/RUN', '/BOT', '/VILLAGEBOT']:
             changeTimeout(False)
             send_message('Beep Boop. Village Bot ready to serve. Type \"\/" + "help\" to see what I can do!')
             return "ok", 200
@@ -148,7 +148,7 @@ def webhook():
             msg = "{} {} killed {} with the {} in {}'s {}.".format(intro, villager1, villager2, weapon, villager3, location)
             send_message(msg)
                 
-        elif '/WHO' in userText.upper() or '/villager' in userText.upper():
+        elif '/WHO' in userText.upper() or '/VILLAGER' in userText.upper():
             villager = random.choice(villagers)
             send_message(villager)
             
